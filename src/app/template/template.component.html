@@ -1,0 +1,24 @@
+<div class = "container">
+    
+<div class="box1">
+    <input type="text" placeholder="Search Contacts" class="search" [(ngModel)]="searchContact">    
+</div>
+
+<div class="box3"></div>
+
+<div>
+    <igx-list>
+        <igx-list-item *ngFor="let contact of contacts | igxFilter: filterContacts;">
+            <igx-avatar
+            roundShape="true" (click)="display(contact)">
+            </igx-avatar>
+            <span igxListLineTitle>{{ contact.name }}</span>
+            <span igxListLineSubTitle>{{ contact.number }}</span>
+        </igx-list-item>
+    </igx-list>
+</div>
+
+<footer> </footer>
+
+</div>
+
